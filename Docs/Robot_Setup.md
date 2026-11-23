@@ -31,7 +31,7 @@ Follow `rpi_setup.md` of the course (Ubuntu 24.04, ROS 2 Jazzy, `bluerobotics_na
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install --packages-select gnc_control auv_hardware
 colcon test --packages-select gnc_control auv_hardware
 colcon test-result --verbose
@@ -43,7 +43,7 @@ Before fitting the servo hub, center the servo, as asked in the servo presentati
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run auv_hardware navigator --ros-args --params-file src/auv_hardware/config/robot.yaml
 ```
 
@@ -87,7 +87,7 @@ Write the results in the section `fusion` of `robot.yaml`. Then start the nodes,
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch auv_hardware robot.launch.py
 ```
 
@@ -119,7 +119,7 @@ ros2 topic echo /state/depth
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch auv_hardware robot.launch.py swim:=true
 ```
 
@@ -176,7 +176,7 @@ The first mission should be `timed.yaml`, which does not use the position, with 
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch auv_hardware robot.launch.py swim:=true mission:=timed.yaml
 ```
 
@@ -184,7 +184,7 @@ ros2 launch auv_hardware robot.launch.py swim:=true mission:=timed.yaml
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control teleop
 ```
 

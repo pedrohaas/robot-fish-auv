@@ -206,7 +206,7 @@ If the estimated heading stops for 0.5 s, the node stops publishing and the watc
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 ```
 
@@ -214,7 +214,7 @@ colcon build --symlink-install
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon test --packages-select gnc_control
 colcon test-result --verbose
 ```
@@ -235,7 +235,7 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control navigation.launch.py
 ```
 
@@ -244,7 +244,7 @@ ros2 launch gnc_control navigation.launch.py
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control heading_control.launch.py
 ```
 
@@ -272,7 +272,7 @@ To stop the robot, stop the controller (Ctrl+C in terminal 3): without commands,
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control heading_test --ros-args -p sequence:="0:8,90:12,180:12,270:12,0:12" -p output:=square.csv
 ```
 
@@ -281,7 +281,7 @@ with terminal 3 started as:
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control heading_control --ros-args --params-file src/gnc_control/config/heading_control.yaml -p cruise_amplitude_deg:=15.0
 ```
 
@@ -373,7 +373,7 @@ With the fin free, out of the water:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 ```
 
@@ -381,7 +381,7 @@ colcon build --symlink-install
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon test --packages-select gnc_control
 colcon test-result --verbose
 ```
@@ -391,7 +391,7 @@ colcon test-result --verbose
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST   # remove on the robot if the commands come from another computer
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control tail_oscillator.launch.py
 ```
 
@@ -509,7 +509,7 @@ Run the `imu_calib` tools of the course with the robot assembled, then write the
 ```bash
 python3 -m pip install --user --break-system-packages imufusion
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 ```
 
@@ -517,7 +517,7 @@ colcon build --symlink-install
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon test --packages-select gnc_control
 colcon test-result --verbose
 ```
@@ -538,7 +538,7 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control navigation.launch.py
 ```
 
@@ -609,7 +609,7 @@ These results were obtained before the moving mass of section 9, which does not 
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 colcon test --packages-select gnc_control
 colcon test-result --verbose
@@ -631,7 +631,7 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control navigation.launch.py
 ```
 
@@ -640,7 +640,7 @@ ros2 launch gnc_control navigation.launch.py
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control heading_control.launch.py
 ```
 
@@ -722,7 +722,7 @@ Unit tests (`ros2_ws/src/gnc_control/test/test_depth_controller.py`): signs, lim
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 colcon test --packages-select gnc_control
 colcon test-result --verbose
@@ -744,7 +744,7 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control navigation.launch.py
 ```
 
@@ -753,7 +753,7 @@ ros2 launch gnc_control navigation.launch.py
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control heading_control.launch.py
 ```
 
@@ -762,7 +762,7 @@ ros2 launch gnc_control heading_control.launch.py
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control depth_control.launch.py
 ```
 
@@ -795,7 +795,7 @@ ros2 topic echo /gnc/depth_error
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control depth_test --ros-args -p sequence:="2.5:10,3.5:30,2.5:30" -p output:=depth.csv
 ```
 
@@ -896,7 +896,7 @@ Unit tests (`test_mission.py`): phases, order of the steps, each event, teleop a
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install
 colcon test --packages-select gnc_control
 colcon test-result --verbose
@@ -918,7 +918,7 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=127.0.0.
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control simulation.launch.py mission:=waypoints.yaml
 ```
 
@@ -935,7 +935,7 @@ ros2 topic echo /mission/status
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control teleop
 ```
 

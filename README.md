@@ -28,6 +28,8 @@ Project of the **Brazilian Team** for the *System Engineering* course 2026–202
 
 Pedro ALVES DE ARAUJO SILVA, Daniel FARLEI SILVA SOUZA, Matheus BENIGNO DA SILVA, Leticia Lie FURUTA, Pedro BARBOSA NORI and Luiz Felipe BARROS ALVES. Students of the *System Engineering* course at ENSTA, 2026–2027.
 
+This repository is a copy, with its full history, of the course repository [Ingenierie-Systeme/brazilian-team-repo](https://github.com/Ingenierie-Systeme/brazilian-team-repo).
+
 ## Contents
 
 - [Current status](#current-status)
@@ -267,7 +269,7 @@ All from the simulation, closed loop through ROS 2. Nothing has been measured on
 
 You need Ubuntu 24.04. [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation.html) is needed for the navigation, guidance and control, and Unity 6000.6.5f1 only to open or change the project.
 
-**Just the simulator, without Unity (Linux):** download `RobotFishSimulator-linux.zip` from the [latest release](https://github.com/Ingenierie-Systeme/brazilian-team-repo/releases/latest), then:
+**Just the simulator, without Unity (Linux):** download `RobotFishSimulator-linux.zip` from the [latest release](https://github.com/pedrohaas/robot-fish-auv/releases/latest), then:
 
 ```bash
 unzip RobotFishSimulator-linux.zip && cd RobotFishSimulator
@@ -295,7 +297,7 @@ source /opt/ros/jazzy/setup.bash
 mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
 git clone -b main-ros2 https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
 cd ~/ros2_ws && colcon build
-cd <path to>/brazilian-team-repo/ros2_ws
+cd <path to>/robot-fish-auv/ros2_ws
 colcon build --symlink-install --packages-select gnc_control
 ```
 
@@ -313,7 +315,7 @@ Terminal 2, all the nodes and a mission (the robot starts swimming after a few s
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch gnc_control simulation.launch.py mission:=waypoints.yaml
 ```
 
@@ -324,7 +326,7 @@ Terminal 3, to take the robot with the keyboard at any moment (Space swims, A/D 
 ```bash
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control teleop
 ```
 
@@ -378,7 +380,7 @@ Start the robot at the surface, because this pressure is the zero of the depth. 
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch auv_hardware robot.launch.py swim:=true mission:=timed.yaml
 ```
 
@@ -386,7 +388,7 @@ Terminal 2, to take the robot with the keyboard at any moment (X stops everythin
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control teleop
 ```
 
@@ -394,7 +396,7 @@ ros2 run gnc_control teleop
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 launch auv_hardware robot.launch.py
 ```
 
@@ -402,7 +404,7 @@ Terminal 2 (Space swims, A/D turn, W/S move the mass, X stops):
 
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd <path to>/brazilian-team-repo/ros2_ws && source install/setup.bash
+cd <path to>/robot-fish-auv/ros2_ws && source install/setup.bash
 ros2 run gnc_control teleop
 ```
 
